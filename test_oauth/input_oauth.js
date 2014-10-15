@@ -196,7 +196,11 @@ $.post("/example/jquery/demo_test_post.asp",
  
  
 
- 
+  
+ $( document ).bind( "mobileinit", function() { 
+   $.support.cors = true;    
+   $.mobile.allowCrossDomainPages = true; 
+}); 
  
  
  
