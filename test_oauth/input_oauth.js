@@ -210,7 +210,7 @@ $.post("/example/jquery/demo_test_post.asp",
  
  
  
- 
+ /*
  $.ajax({
     url: my_request_token_string,
     type: "post",
@@ -237,7 +237,7 @@ $.post("/example/jquery/demo_test_post.asp",
 	document.write('out response is '+data+'<br/>');
 	//process your data here
 });
-
+*/
  
 
  
@@ -526,7 +526,12 @@ if ( request ){
 
 */			
 	
-
+	
+	var xmlhttp=new XMLHttpRequest();
+	xmlhttp.open('post',my_request_token_string,false);
+	xmlhttp.send(null);
+	xmldoc=xmlhttp.responseText;
+document.write(xmlhttp.responseText);
 
 		
 			
